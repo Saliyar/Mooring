@@ -2,39 +2,38 @@
 ----------------------- LINE TYPES ------------------------------------------
 Name     Diam      MassDen      EA    BA/-zeta  Can   Cat   Cdn   Cdt
 (-)       (m)      (kg/m)       (N)   (N-s/-)   (-)   (-)   (-)   (-)
-main     0.268     438.4      6.13E+09  -2      1.0   0.0  1.33   0.64
+main     0.266    435.2     1.5E9   -2.0     0.8   0.4  1.3   0.4
 ---------------------- CONNECTION PROPERTIES --------------------------------
 Node    Type      X        Y        Z       M     V      FX   FY   FZ   CdA   CA
 (-)     (-)      (m)      (m)      (m)     (kg)  (m^3)  (kN) (kN) (kN) (m^2)  (-)
-1      Fixed      640.1      0        -200       0        0      0    0    0    0     0
-2      Fixed      -320      554.3     -200        0       0      0    0    0    0     0
-3      Fixed      -320     -554.3     -200        0       0      0    0    0    0     0
-4      Connect     39.4     0       -46.8   28800   0    0    0    0    4.8     0
-5      Connect    -19.5   34    -46.8    28800   0    0    0    0    4.8     0
-6      Connect   -19.5   -34    -46.8   28800    0    0    0    0   4.8     0
-7      Vessel    5.22     -9.04    -13.4     0      0      0    0    0    0     0
-8      Vessel    5.22      9.04     -13.4     0      0      0    0    0    0     0
-9      Vessel   -10.44      0.0       -13.4     0      0      0    0    0    0     0
+1      Fixed   638.35    0    -200.0      0      0      0    0    0    0     0
+2      Fixed   -320    554.3   -200.0     0      0      0    0    0    0     0
+3      Fixed   -320   -554.3   -200.0     0      0      0    0    0    0     0
+4      Connect  39.4    0      -46.6      2.4E+4      0      0    0    0    6.0     0
+5      Connect  -19.5    34.0   -46.6      2.4E+4    0      0    0    0    6.0     0
+6      Connect  -19.5    -34.0   -46.6    2.4E+4      0      0    0    0    6.0     0
+7      Vessel   5.22   -9.04   -13.4         0      0      0    0    0    0     0
+8      Vessel  5.22     9.04   -13.4          0      0      0    0    0    0     0
+9      Vessel  -10.44    0.0    -13.4         0      0      0    0    0    0     0
 ---------------------- LINE PROPERTIES --------------------------------------
 Line    LineType  UnstrLen  NumSegs   NodeAnch  NodeFair  Flags/Outputs
 (-)       (-)       (m)       (-)       (-)       (-)         (-)
-1         main     640   100       1        4           pt
-2         main     640     100       2         5         pt
-3         main     640     100       3         6          pt
-4         main     48         10       4         7           pt
-5         main     48         10       4         8           pt
-6         main     48         10       5         8           pt
-7         main     48        10      5         9           pt
-8         main     48        10      6         9           pt
-9         main     48        10      6         7           pt
+1         main     637.0      50       1         4           pt
+2         main     638.7      50       2         5          pt
+3         main     638.7       50       3         6          pt
+4         main     48         5       4         7           pt
+5         main     48         5       4         8           pt
+6         main     48         5       5         8           pt
+7         main     48         5       5         9           pt
+8         main     48         5       6         9           pt
+9         main     48         5       6         7           pt
 ---------------------- SOLVER OPTIONS ---------------------------------------
-0.00001      dtM       - time step to use in mooring integration (s)
-3e6    	 kbot      - bottom stiffness (Pa/m)
-3e5       cbot      - bottom damping (Pa-s/m)
+0.001    dtM       - time step to use in mooring integration (s)
+3e7    	 kbot      - bottom stiffness (Pa/m)
+3e6      cbot      - bottom damping (Pa-s/m)
 0.25     dtIC      - time interval for analyzing convergence during IC gen (s)
-100     TmaxIC    - max time for ic gen (s)
-10     CdScaleIC - factor by which to scale drag coefficients during dynamic relaxation (-)
-0.01    threshIC   - threshold for IC convergence (-)
+300.0    TmaxIC    - max time for ic gen (s)
+10.0     CdScaleIC - factor by which to scale drag coefficients during dynamic relaxation (-)
+0.001    threshIC   - threshold for IC convergence (-)
 ------------------------ OUTPUTS --------------------------------------------
-FAIRTEN4 FAIRTEN5 FAIRTEN6 FAIRTEN7 FAIRTEN8 FAIRTEN9
 ------------------------- need this line --------------------------------------
